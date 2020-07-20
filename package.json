@@ -1,14 +1,13 @@
 {
-  "name": "async-params-phoenix",
+  "name": "@konnng/async-params-phoenix",
   "version": "0.0.1",
   "description": "wrapper package for phoenix, to deal with params as promise",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "npm run test && tsc && npm run build:types",
-    "build:types": "tsc -d --declarationDir dist/lib --declarationMap --emitDeclarationOnly",
+    "build": "npm run test && tsc",
     "test": "eslint 'src/**/*.ts'",
-    "prepare": "npm run build"
+    "prepublish": "npm run build"
   },
   "author": "Konnng <falecom@konnng.com>",
   "license": "MIT",
