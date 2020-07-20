@@ -5,14 +5,16 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run test && tsc",
-    "test": "eslint 'src/**/*.ts'"
+    "test": "eslint 'src/**/*.ts'",
+    "prepare": "npm run build"
   },
   "author": "Konnng <falecom@konnng.com>",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "phoenix": "1.5.3"
   },
   "devDependencies": {
+    "phoenix": "1.5.3",
     "@types/phoenix": "^1.4.4",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
@@ -20,11 +22,11 @@
     "typescript": "^3.9.7"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Konnng/async-params-phoenix.git"
+    "type": "git",
+    "url": "https://github.com/Konnng/async-params-phoenix.git"
   },
   "bugs": {
     "url": "https://github.com/Konnng/async-params-phoenix/issues",
-    "email" : "falecom@konnng.com"
+    "email": "falecom@konnng.com"
   }
 }
