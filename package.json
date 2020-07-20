@@ -1,0 +1,30 @@
+{
+  "name": "async-params-phoenix",
+  "version": "0.0.1",
+  "description": "wrapper package for phoenix, to deal with params as promise",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run test && tsc",
+    "test": "eslint 'src/**/*.ts'"
+  },
+  "author": "Konnng <falecom@konnng.com>",
+  "license": "MIT",
+  "dependencies": {
+    "phoenix": "1.5.3"
+  },
+  "devDependencies": {
+    "@types/phoenix": "^1.4.4",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.5.0",
+    "typescript": "^3.9.7"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Konnng/async-params-phoenix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Konnng/async-params-phoenix/issues",
+    "email" : "falecom@konnng.com"
+  }
+}
