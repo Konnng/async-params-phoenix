@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run test && tsc",
     "test": "eslint 'src/**/*.ts'",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "author": "Konnng <falecom@konnng.com>",
   "license": "MIT",
