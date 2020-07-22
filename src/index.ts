@@ -2,6 +2,7 @@ import { Socket, SocketConnectOption } from 'phoenix'
 
 type SockParamsPromise = () => Promise<Record<string, unknown>>
 type SocketParams = Promise<Record<string, unknown>> | (() => Promise<Record<string, unknown>>) | SockParamsPromise
+const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
 
 /**
  * phoenix package does not support async params, so we need to create a intermediary socket class to handle
@@ -20,7 +21,7 @@ export default class AsyncParamsPhoenixSocket extends Socket {
 
   connect(_params: SocketParams): void {
     if (
-      this.params?.constructor == Function &&
+      (this.params?.constructor === Function || this.params?.constructor === AsyncFunction) &&
       (this.params as SockParamsPromise)()?.constructor === Promise
     ) {
       // createa a promise resolver to deal with params, then call parent connect method
